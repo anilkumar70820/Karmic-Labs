@@ -1,38 +1,439 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500&family=Sunflower:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    list-style-type: none;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    max-width: 1140px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ===============Root Start================== */
+:root {
+    --fs-sm: 16px;
+    --fs-md: 20px;
+    --fs-lg: 56px;
+    --fs-xl: 64px;
+    --text-ffffff: white;
+    --text-040404: #040404;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.fs_sm {
+    font-size: var(--fs-sm);
 }
 
-.App-link {
-  color: #61dafb;
+.fs_md {
+    font-size: var(--fs-md);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fs_lg {
+    font-size: var(--fs-lg);
+}
+
+.fs_xl {
+    font-size: var(--fs-xl);
+}
+
+.text_ffffff {
+    color: var(--text-ffffff);
+}
+
+.text_040404 {
+    color: var(--text-040404);
+}
+
+/* ================================ */
+/* ===========Common Classes============= */
+.ff_sun_flower {
+    font-family: 'Sunflower';
+}
+
+.ff_Space_Grotesk {
+    font-family: 'Space Grotesk';
+}
+
+.blur_moon_hero {
+    width: 184px;
+    height: 184px;
+    background-color: #FFF;
+    filter: blur(124px);
+    position: absolute;
+    left: -1%;
+    top: -1%;
+}
+
+.blur_moon_services {
+    width: 182px;
+    height: 182px;
+    background-color: #FFF;
+    filter: blur(124px);
+    position: absolute;
+    right: 0;
+    top: -10%;
+}
+
+.blur_moon_services_2 {
+    width: 209px;
+    height: 209px;
+    background-color: #FFF;
+    filter: blur(124px);
+    position: absolute;
+    left: 0;
+    bottom: -30%;
+}
+.blur_moon_about{
+    width: 226px;
+    height: 226px;
+    background-color: #FFF;
+    filter: blur(124px);
+    position: absolute;
+    right: 0;
+    top: 1%;
+}
+
+/* ============ Common Classes End================= */
+/* ============Hero Section================= */
+header nav ul li a {
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: all 500ms linear;
+}
+
+header nav ul li a:hover:after {
+    transform: scaleX(1);
+}
+
+.header_links {
+    font-family: "Sun flower";
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--text-ffffff);
+}
+
+.connect_wallet_btn {
+    padding: 12px 32px;
+    border: 1px solid transparent;
+    background-color: white;
+    border-radius: 50px;
+    transition: all 500ms linear;
+}
+
+.connect_wallet_btn:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.web_line {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.web_line_2 {
+    content: '';
+    position: absolute;
+    left: 14%;
+    top: -14%;
+}
+
+.get_started_btn {
+    padding: 12px 24px;
+    border-radius: 82px;
+    border: 1px solid transparent;
+    background-color: white;
+    transition: all 500ms linear;
+}
+
+.read_more_btn {
+    padding: 12px 32px;
+    border-radius: 82px;
+    border: 1px solid var(--white, #FFF);
+    background-color: #3b3b3b;
+    transition: all 500ms linear;
+}
+
+.get_started_btn:hover {
+    color: white;
+    background-color: #3b3b3b;
+    border: 1px solid white;
+}
+
+.get_started_btn:hover path {
+    fill: white;
+}
+
+.read_more_btn:hover {
+    transform: translateY(-10px);
+}
+
+.hero_bg {
+    background-image: url(./assets/images/png/hero_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ============Hero section================= */
+/* ===========Upcomming Projects============ */
+.upcomming_project_card {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0px -1px 20px 0px rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(15px);
+    padding: 16px;
+    transition: all 500ms linear;
+}
+
+.view_all_btn {
+    border-radius: 82px;
+    border: 1px solid var(--white, #FFF);
+    padding: 12px 32px;
+    background-color: transparent;
+    transition: all 500ms linear;
+}
+
+.view_all_btn:hover {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+}
+
+/* ===========Upcomming ProjectsEnd================ */
+/* =============Services Section============ */
+.moon_absoulte {
+    position: absolute;
+    top: -40px;
+    right: -30px;
+}
+
+.bg_img {
+    background-image: url(/src/assets/images/png/Homepage_bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.moon {
+    display: none;
+    transition: all 500ms linear;
+}
+
+.col_hover:hover .moon {
+    display: block;
+}
+
+.card_box {
+    transition: all 400ms linear;
+}
+
+.card_box_border {
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 12px;
+}
+
+.col_hover:hover .card_box {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* ============Services Section End=========== */
+/* ============Projects Section============= */
+.project_bg {
+    background-image: url(./assets/images/png/projets_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.project_heading {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 0px 0px 8px 8px;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0px -1px 11px 0px rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(4.5px);
+    opacity: 0;
+    transition: all 500ms linear;
+}
+
+.tokyo {
+    transition: all 500ms linear;
+}
+
+.tokyo:hover {
+    cursor: pointer;
+    scale: 1.4;
+    z-index: 1;
+}
+
+.tokyo:hover .project_heading {
+    opacity: 1;
+}
+
+.project_view_all_btn {
+    border-radius: 82px;
+    border: 1px solid black;
+    padding: 12px 32px;
+    background-color: white;
+    transition: all 500ms linear;
+}
+
+.project_view_all_btn:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+}
+
+/* =============Projects Section End=========== */
+/* ===========Footer About Section============== */
+.about_line {
+    content: '';
+    position: absolute;
+    top: 22%;
+    left: 33%;
+}
+
+.about_img {
+    border-radius: 8px;
+    background: lightgray 50% / cover no-repeat;
+    box-shadow: 0px 4px 15px 0px rgba(255, 255, 255, 0.10);
+    transition: all 500ms linear;
+    cursor: pointer;
+}
+
+.about_img:hover {
+    scale: 1.1;
+}
+
+.social_box {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: all 500ms linear;
+}
+
+.social_box:hover {
+    background-color: black;
+    border: 1px solid white;
+    transform: translatey(-10px);
+}
+
+.social_box:hover path {
+    fill: white;
+}
+
+.hr_line {
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+
+/* ===========Footer About Section End========== */
+/* ===========Media Quries================== */
+@media (max-width:992px) {
+    label[for="menuIcon"] {
+        width: 35px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        z-index: 3;
+    }
+
+    label[for="menuIcon"]>span {
+        width: 100%;
+        height: 4px;
+        background-color: white;
+    }
+
+    .sm_screen {
+        position: fixed;
+        z-index: 2;
+        top: 0%;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        transition: all 500ms linear;
+        overflow: hidden;
+    }
+
+    input[type="checkbox"]:checked~ul.sm_screen {
+        left: 0;
+        pointer-events: all;
+    }
+}
+
+@media (max-width:768px) {
+    :root {
+
+        --fs-lg: 40px;
+        --fs-xl: 50px;
+    }
+}
+
+@media (max-width:576px) {
+    :root {
+        --fs-lg: 30px;
+        --fs-xl: 40px;
+    }
+
+    .w_sm_100 {
+        width: 100%;
+    }
+}
+
+@media (min-width:768px) {
+    .upcomming_project_line::after {
+        content: url(./assets/images/svg/services_line.svg);
+        position: absolute;
+        top: -30%;
+        left: 33%;
+    }
+
+    .project_line::after {
+        content: url(./assets/images/svg/projets_line.svg);
+        position: absolute;
+        bottom: -28%;
+        left: 32%;
+    }
+
+    .service_line::after {
+        content: url(./assets/images/svg/services_line.svg);
+        position: absolute;
+        bottom: -8%;
+        left: 33%;
+    }
 }
