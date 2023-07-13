@@ -4,33 +4,34 @@ import project_img_7 from '../assets/images/png/projets_img_7.png'
 import project_img_8 from '../assets/images/png/projets_img_8.png'
 import logo from '../assets/images/png/logo_img.png'
 import about_line from '../assets/images/svg/services_line.svg'
+import { Container, Col, Row } from 'react-bootstrap'
 export const About = () => {
     return (
-        <footer className='bg_img py-4 position-relative'id='About'>
+        <footer className='bg_img py-4 position-relative' id='About'>
             <div className='blur_moon blur_moon_about'></div>
-            <div className="container">
+            <Container>
                 <div className='position-relative'>
                     <h2 data-aos="fade-left" data-aos-duration="800" className='ff_sun_flower fs_lg fw-light text_ffffff text-center mb-4 mt-lg-4 pt-lg-5'>ABOUT</h2>
                     <img data-aos="fade-right" data-aos-duration="800" className='about_line d-none d-lg-block' src={about_line} alt="about_line" />
                 </div>
                 <p data-aos="fade-down" data-aos-duration="800" className='ff_Space_Grotesk fs_sm fw-bold text_ffffff text-center mb-5'>Eros, amet, feugiat sit nec duis. Tellus in faucibus consectetur dapibus. <span className='d-lg-block'> Eget sem eget nec tincidunt. Urna nulla scelerisque pretium diam aliquam</span> montes, interdum malesuada. </p>
-                <div className="row pb-5">
-                    <div data-aos="zoom-in" data-aos-duration="800" className="col-lg-4 col-sm-6 overflow-hidden rounded-3 mb-4 mb-lg-0">
+                <Row className="pb-5">
+                    <Col lg={4} sm={6} xs={12} data-aos="zoom-in" data-aos-duration="800" className="overflow-hidden rounded-3 mb-4 mb-lg-0">
                         <div className='about_img'>
                             <img className='w-100' src={project_img_7} alt="about_img" />
                         </div>
-                    </div>
-                    <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800" className="col-lg-4 col-sm-6 overflow-hidden rounded-3 mb-4 mb-lg-0">
+                    </Col>
+                    <Col lg={4} sm={6} xs={12} data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800" className="overflow-hidden rounded-3 mb-4 mb-lg-0">
                         <div className='about_img'>
                             <img className='w-100' src={project_img_6} alt="about_img" />
                         </div>
-                    </div>
-                    <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800" className="col-lg-4 col-sm-6 overflow-hidden rounded-3">
+                    </Col>
+                    <Col lg={4} sm={6} xs={12} data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800" className="overflow-hidden rounded-3">
                         <div className='about_img'>
                             <img className='w-100' src={project_img_8} alt="about_img" />
                         </div>
-                    </div>
-                </div>
+                    </Col>
+                </Row>
                 <div data-aos="fade-up" data-aos-duration="800" className='d-flex justify-content-center mt-5 pt-5'>
                     <a href="#logo"><img className='mt-4' src={logo} alt="logo" /></a>
                 </div>
@@ -52,7 +53,7 @@ export const About = () => {
                     </svg>
                     </a></span>
                 </div>
-            </div>
+            </Container>
             <div className='hr_line my-3'></div>
             <p className='ff_Space_Grotesk fs_sm text_ffffff fw-normal text-center mb-0 pb-2 opacity-75'>© Karmic labs 2022</p>
 

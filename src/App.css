@@ -85,7 +85,8 @@
     left: 0;
     bottom: -30%;
 }
-.blur_moon_about{
+
+.blur_moon_about {
     width: 226px;
     height: 226px;
     background-color: #FFF;
@@ -390,10 +391,18 @@ header nav ul li a:hover:after {
         overflow: hidden;
     }
 
-    input[type="checkbox"]:checked~ul.sm_screen {
+    .show {
+        left: 0;
+    }
+
+    .overflow_hidden {
+        overflow: hidden;
+    }
+
+    /* input[type="checkbox"]:checked~ul.sm_screen {
         left: 0;
         pointer-events: all;
-    }
+    } */
 }
 
 @media (max-width:768px) {
@@ -420,7 +429,7 @@ header nav ul li a:hover:after {
         content: url(./assets/images/svg/services_line.svg);
         position: absolute;
         top: -30%;
-        left: 33%;
+        left: 32%;
     }
 
     .project_line::after {
